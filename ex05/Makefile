@@ -4,13 +4,13 @@ BLUE = \033[0;94m
 DEF_COLOR = \033[0;39m
 GREEN =	\033[0;92m
 
-NAME = violence
+NAME = harl
 CC = g++
 FLAGS = -Wall -Wextra -Werror
 
-HEADER = Weapon.hpp HumanA.hpp HumanB.hpp
+HEADER = Harl.hpp
 
-SRC = Weapon.cpp HumanA.cpp HumanB.cpp main.cpp
+SRC = Harl.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -25,6 +25,7 @@ $(NAME): $(OBJ)
 
 clean:
 	@rm -f $(OBJ)
+	@rm -f *.replace
 	@echo "$(BROWN)Successfully removed objects!$(DEF_COLOR)"
 
 fclean: clean

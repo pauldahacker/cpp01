@@ -4,13 +4,11 @@ BLUE = \033[0;94m
 DEF_COLOR = \033[0;39m
 GREEN =	\033[0;92m
 
-NAME = violence
+NAME = replace
 CC = g++
 FLAGS = -Wall -Wextra -Werror
 
-HEADER = Weapon.hpp HumanA.hpp HumanB.hpp
-
-SRC = Weapon.cpp HumanA.cpp HumanB.cpp main.cpp
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -19,12 +17,13 @@ $(NAME): $(OBJ)
 	@$(CC) $(FLAGS) -o $(NAME) $(OBJ)
 	@echo "$(GREEN)$(NAME) compiled succesfully!$(DEF_COLOR)"
 
-%.o: %.cpp $(HEADER) Makefile
+%.o: %.cpp Makefile
 	@echo "$(BROWN)Compiling   ${BLUE}→   $(ORANGE)$< $(DEF_COLOR)"
 	@$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
+	@rm -f *.replace
 	@echo "$(BROWN)Successfully removed objects!$(DEF_COLOR)"
 
 fclean: clean
