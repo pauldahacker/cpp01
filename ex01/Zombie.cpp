@@ -2,12 +2,12 @@
 
 Zombie::Zombie(std::string name) : _name(name)
 {
-	std::cout << "Constructing Zombie: " << name << std::endl;
+	return ;
 }
 
 Zombie::Zombie(void) : _name("Default")
 {
-	std::cout << "Constructing Zombie: " << this->_name << std::endl;
+	return ;
 }
 
 Zombie::~Zombie(void)

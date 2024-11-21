@@ -14,7 +14,7 @@ int	main(void)
 {
 	Zombie*	z = newZombie("Paul");
 	z->announce();
-	randomChump("Juliette");
+	randomChump("Pogba");
 	delete z;
 	return (0);
 }

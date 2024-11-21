@@ -1,6 +1,6 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name, Weapon weapon) : _name(name), _weapon(&weapon)
+HumanB::HumanB(std::string name, Weapon& weapon) : _name(name), _weapon(&weapon)
 {
 	std::cout << "Human B (" << name << ") created" << std::endl;
 }

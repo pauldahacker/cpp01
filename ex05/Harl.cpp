@@ -1,15 +1,5 @@
 #include "Harl.hpp"
 
-Harl::Harl(void)
-{
-	std::cout << "Constructing Harl..." << std::endl;
-}
-
-Harl::~Harl(void)
-{
-	std::cout << "Destroying Harl..." << std::endl;
-}
-
 void Harl::debug(void)
 {
 	std::cout << "This is Harl's DEBUG message!" << std::endl;
